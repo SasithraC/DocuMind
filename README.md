@@ -9,41 +9,49 @@ A full-stack app to upload PDF documents, ask questions about them, and get answ
 ### Prerequisites
 - Python 3.11+
 - Node.js 18+
+- PostgreSQL (running locally on port `5432`)
 - A Groq API key (free at [console.groq.com](https://console.groq.com))
-- SQLite (default) or PostgreSQL (optional)
 
 ### Setup & Run
 
-1. **Configure Environment Variables**:
-   Open [backend/.env](file:///d:/doc-qa-service/backend/.env) and set your `GROQ_API_KEY`:
-   ```env
-   GROQ_API_KEY=your_actual_groq_api_key
+1. **Set up PostgreSQL**:
+   Make sure PostgreSQL is installed and running. Then create the database:
+   ```bash
+   psql -U postgres -c "CREATE DATABASE doc_qa_db;"
    ```
-   *Note: By default, `DATABASE_URL` is set to `sqlite:///./doc_qa_db.db` which runs out-of-the-box. If you wish to use PostgreSQL, update it to your PostgreSQL connection string.*
 
-2. **Start the Backend**:
+2. **Configure Environment Variables**:
+   Create a `backend/.env` file (copy from `backend/.env.example`) and fill in your values:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   DATABASE_URL=postgresql://postgres:your_password@localhost:5432/doc_qa_db
+   PORT=8000
+   GROQ_MODEL=llama-3.3-70b-versatile
+   ```
+
+3. **Start the Backend**:
    ```bash
    cd backend
-   
+
    # Activate the virtual environment
    venv\Scripts\activate       # On Windows (Command Prompt)
    source venv/bin/activate    # On macOS/Linux
-   
-   # Install dependencies (already pre-installed in workspace)
+
+   # Install dependencies
    pip install -r ../requirements.txt
-   
+
    # Start the FastAPI server
    uvicorn app.main:app --reload
    ```
    The backend runs on [http://localhost:8000](http://localhost:8000).
 
-3. **Start the Frontend**:
+4. **Start the Frontend**:
    ```bash
    cd frontend
-   
+
    # Install frontend dependencies
    npm install
-   
+
    # Start the React/Vite development server
    npm run dev
    ```
