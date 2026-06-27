@@ -175,7 +175,6 @@ This is a **RAG (Retrieval-Augmented Generation)** architecture. The LLM never a
 
 ---
 
-## What I'd Do Next with More Time
 
 
 - **Vector search** — replace lexical search with embeddings (pgvector or Chroma) for semantic similarity, so "show me compensation details" finds pages that say "salary" without needing an exact keyword match
