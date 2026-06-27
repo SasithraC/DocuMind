@@ -26,7 +26,7 @@ A full-stack app to upload PDF documents, ask questions about them, and get answ
    cd backend
    
    # Activate the virtual environment
-   venv\Scripts\activate       # On Windows (Command Prompt/PowerShell)
+   venv\Scripts\activate       # On Windows (Command Prompt)
    source venv/bin/activate    # On macOS/Linux
    
    # Install dependencies (already pre-installed in workspace)

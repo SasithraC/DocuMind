@@ -70,7 +70,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© 2026 DocuMind.</p>
+        <p>© 2026 Vallora.</p>
       </footer>
     </div>
   )
