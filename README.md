@@ -1,4 +1,4 @@
-# DocuMind Q&A
+# Document Intelligence Q&A
 
 A full-stack app to upload PDF documents, ask questions about them, and get answers grounded in the documents with exact page citations.
 

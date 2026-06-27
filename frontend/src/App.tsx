@@ -32,7 +32,7 @@ function App() {
             <div className="logo-icon">
               <FileText size={24} />
             </div>
-            <h1>DocuMind <span className="gradient-text">Q&A</span></h1>
+            <h1>Document Intelligence <span className="gradient-text">Q&A</span></h1>
           </div>
           <button
             className="theme-toggle-btn"
