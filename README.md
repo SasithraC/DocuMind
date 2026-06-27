@@ -117,11 +117,4 @@ This is a **RAG (Retrieval-Augmented Generation)** architecture — the LLM neve
 
 ---
 
-## What I'd Do Next with More Time
 
-- **Vector search** — replace lexical search with embeddings (pgvector or Chroma) for semantic similarity, so "show me compensation details" finds pages that say "salary" without needing an exact keyword match
-- **Streaming responses** — stream LLM output token-by-token so users see the answer appear in real time
-- **Authentication** — user accounts so each user only sees their own documents
-- **Better chunking** — split pages into overlapping chunks for more precise citations instead of whole-page context
-- **Celery + Redis** — replace BackgroundTasks with a proper task queue for reliability under load
-- **File validation** — reject password-protected or scanned (image-only) PDFs with a clear error message
